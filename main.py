@@ -13,20 +13,25 @@ def retirar(plata=None):
             print("Fondos insuficientes")
         else:
             dinero = dinero - retiro
-            print(dinero)
+            print(retiro, "Retirados correctamente")
+
+
+def consultar():
+    print("Su dinero es de " + str(dinero))
 
 
 while opcion != -1:
-    option = int(input("Digite...\n(1) Para retirar dinero\n(2) Para consultar Cuenta\n(3) Para agregar Dinero\n(4) "
+    opcion = int(input("Digite...\n(1) Para retirar dinero\n(2) Para consultar Cuenta\n(3) Para agregar Dinero\n(4) "
                        "Salir\n"))
 
-    if option == 1:
+    if opcion == 1:
         retirar(dinero)
-    elif option == 2:
-        print("2")
-    elif option == 3:
+    elif opcion == 2:
+        consultar()
+    elif opcion == 3:
         print("3")
-    elif option == 4:
-        option = -1
+    elif opcion == 4:
+        opcion = -1
     else:
         print("Numero incorrecto!!")
+print(dinero)
