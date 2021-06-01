@@ -20,6 +20,14 @@ def consultar():
     print("Su dinero es de " + str(dinero))
 
 
+def agregar():
+
+    global dinero
+    dinero1 = int(input("Digite el monto a agregar"))
+    print("Se ha agregado correctamente el monto!!")
+    dinero+= dinero1
+
+
 while opcion != -1:
     opcion = int(input("Digite...\n(1) Para retirar dinero\n(2) Para consultar Cuenta\n(3) Para agregar Dinero\n(4) "
                        "Salir\n"))
@@ -29,9 +37,9 @@ while opcion != -1:
     elif opcion == 2:
         consultar()
     elif opcion == 3:
-        print("3")
+        agregar()
     elif opcion == 4:
         opcion = -1
     else:
         print("Numero incorrecto!!")
-print(dinero)
+
